@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <form action="/add" method="POST">
+        <input type="text" name="task" placeholder="New Task">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {{range .}}
+        <li>{{.}}</li>
+        {{end}}
+    </ul>
+</body>
+</html>
